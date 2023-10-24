@@ -14,15 +14,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
-
-#include <stdint.h>
-#include <stdbool.h>
-#include "action.h"
+#include "quantum.h"
 
 #ifdef VIA_ENABLE
 #    include "via.h"
 #endif
+
+#define KC_MICT QK_KB_0
+#define KC_LAPA QK_KB_1
 
 #include "quantum_keycodes.h"
 
