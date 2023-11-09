@@ -28,6 +28,11 @@ bool process_record_programmer_keys(uint16_t keycode, keyrecord_t *record) {
         case KC_0:
             return process_record_invert_shift(keycode, record);
             break;
+
+        case KC_NUBS:
+            return process_record_replace_key(keycode, record, S(KC_GT), S(KC_LT));
+            break;
+
         default:
             return true; // Process all other keycodes normally
     }
