@@ -16,7 +16,7 @@ bool process_record_programmer_keys(uint16_t keycode, keyrecord_t *record) {
         case KC_7:
              return process_record_altcode(keycode, record, 38, 55, 124); // & 7 |
              break;
-
+  
         // invert Shift
         case KC_LBRC: // [{
         case KC_RBRC: // ]}
@@ -32,13 +32,16 @@ bool process_record_programmer_keys(uint16_t keycode, keyrecord_t *record) {
         case KC_NUBS:
             return process_record_replace_key(keycode, record, S(KC_GT), S(KC_LT));
             break;
-
+            
         default:
             return true; // Process all other keycodes normally
     }
 }
 
 bool process_record_custom(uint16_t keycode, keyrecord_t *record) {
+    if(!process_record_accented(keycode, record))
+        return false;
+
     if(!process_record_programmer_keys(keycode, record))
         return false;
 

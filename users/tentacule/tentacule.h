@@ -13,3 +13,4 @@ extern bool process_record_custom(uint16_t keycode, keyrecord_t *record);
 extern bool process_record_invert_shift(uint16_t keycode, keyrecord_t *record);
 extern bool process_record_altcode(uint16_t keycode, keyrecord_t *record, uint16_t noMod, uint16_t shiftMod, uint16_t altMod);
 extern bool process_record_replace_key(uint16_t keycode, keyrecord_t *record, uint16_t newKey, uint16_t newShiftedKey);
+extern bool process_record_accented(uint16_t keycode, keyrecord_t *record) ;
